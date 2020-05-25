@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /* align-items -> แนวตั้ง, justify-items -> แนวนอน, place-items -> ทั้งสอง */
+
+.container {
+    margin-top: 40px;
+    height: 1000px;
+    width: 90%;
+    display: grid;
+    grid-template-rows: 50px 400px 600px 600px;
+    grid-row-gap: 10px;
+    justify-content: center;
+    
+}
+.item1 {
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    grid-column-gap: 10px;
+    align-content: center;
+    justify-content: center;
+}
+.item1-1 {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: rgb(236, 185, 42);
+    font-weight: bold;
+}
+
+.item2 {
+    display: grid;
+    grid-template-columns: repeat(3,325px);
+    grid-gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.item3 {
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows: 200px 400px;
+    grid-row-gap: 20px;
+    justify-content: center;
+}
+.item3-1 {
+    display: grid;
+    grid-template-columns: repeat(4,245px);
+    grid-column-gap: 20px;
+    justify-content: center;
+}
+.item3-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.item4 {
+    background-color: lightcoral;
+    height: 200px;
+    grid-column: 1/4;
+    grid-row: 3;
+}
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="item1">
+            <div class="item1-1">box1</div>
+            <div class="item1-1">box2</div>
+            <div class="item1-1">box3</div>
+            <div class="item1-1">box4</div>
+            <div class="item1-1">box5</div>
+        </div>
+
+        <div class="item2">box</div>
+
+        <div class="item3">
+            <div class="item3-1"></div>
+                <div class="item3-2">box1</div>
+                <div class="item3-2">box2</div>
+                <div class="item3-2">box3</div>
+                <div class="item3-2">box4</div>
+                <div class="item3-2">box5</div>
+            </div>
+        </div>
+
+        <div class="item4">box</div>
+    </div>
+</body>
+</html>
